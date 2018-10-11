@@ -7,20 +7,28 @@
 //
 
 import Foundation
+import CoreData
+
+protocol Storable {
+    associatedtype DataBaseEntity: NSManagedObject, DataBaseModelable
+}
 
 protocol WeatherItemModelable {
     var temperature: Double {get}
     var humidity: Double {get}
     var cape: Double {get}
-    var date: Date {get}
 }
 
-struct WeatherItem: WeatherItemModelable {
+struct WeatherItem: WeatherItemModelable, Storable {
+    
+    typealias DataBaseEntity = CDWeatherItem
+    
     let temperature: Double
     let humidity: Double
     let cape: Double
-    let date: Date
-    
+}
+
+extension WeatherItem {
     init(date: Date, dictionary: [String: Any]) {
         
         if let tempDict = dictionary["temperature"] as? [String: Double], let temp = tempDict["2m"] {
@@ -36,6 +44,5 @@ struct WeatherItem: WeatherItemModelable {
         }
         
         cape = dictionary["humidite"] as? Double ?? 0
-        self.date = date
     }
 }

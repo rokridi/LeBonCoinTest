@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias WeatherCompletion = ((Result<WeatherModelable>)->Void)
+typealias WeatherCompletion = ((Result<[WeatherItemModelable]>)->Void)
 
 protocol HTTPClient {
     func weather(latitude: Double, longitude: Double, completion: @escaping WeatherCompletion) -> URLSessionTask?
@@ -61,7 +61,7 @@ extension WeatherHTTPClient: HTTPClient {
                             let weather = Weather(dictionary: dictionary)
                             
                             if weather.requestState == 200 {
-                                completion(.success(weather))
+                                completion(.success(weather.items))
                             } else {
                                 let error = WeatherHTTPClientError.apiError(code: weather.requestState, message: weather.message)
                                 completion(.failure(error))

@@ -18,7 +18,7 @@ struct Weather: WeatherModelable {
     let requestState: Int
     let message: String
     let items: [WeatherItemModelable]
-    
+
     init(dictionary: [String: Any]) {
         
         requestState = dictionary["request_state"] as? Int ?? 0
@@ -30,9 +30,9 @@ struct Weather: WeatherModelable {
         items = dictionary.map { (key, value) -> WeatherItemModelable? in
             if let date = dateFormatter.date(from: key), let dict = value as? [String: Any] {
                 return WeatherItem(date: date, dictionary: dict)
-                
             }
             return nil
             }.compactMap { $0 }
     }
 }
+
