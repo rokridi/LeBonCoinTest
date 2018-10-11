@@ -18,6 +18,12 @@
 		F4259083216F3BC700192ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4259081216F3BC700192ED3 /* LaunchScreen.storyboard */; };
 		F425908E216F3BC800192ED3 /* LeBonCoinTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F425908D216F3BC800192ED3 /* LeBonCoinTestTests.swift */; };
 		F4259099216F3BC800192ED3 /* LeBonCoinTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4259098216F3BC800192ED3 /* LeBonCoinTestUITests.swift */; };
+		F42590AC216F3D7A00192ED3 /* WeatherHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42590AB216F3D7A00192ED3 /* WeatherHTTPClient.swift */; };
+		F42590AF216F408900192ED3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42590AE216F408900192ED3 /* Weather.swift */; };
+		F42590B1216F43B700192ED3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42590B0216F43B700192ED3 /* WeatherItem.swift */; };
+		F42590B4216F453900192ED3 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42590B3216F453900192ED3 /* ApiRouter.swift */; };
+		F42590B7216F519100192ED3 /* WeatherHTTPClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42590B6216F519100192ED3 /* WeatherHTTPClientConfiguration.swift */; };
+		F42590B9216F538500192ED3 /* configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = F42590B8216F538500192ED3 /* configuration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		F4259094216F3BC800192ED3 /* LeBonCoinTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBonCoinTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4259098216F3BC800192ED3 /* LeBonCoinTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBonCoinTestUITests.swift; sourceTree = "<group>"; };
 		F425909A216F3BC800192ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42590AB216F3D7A00192ED3 /* WeatherHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHTTPClient.swift; sourceTree = "<group>"; };
+		F42590AE216F408900192ED3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		F42590B0216F43B700192ED3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
+		F42590B3216F453900192ED3 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		F42590B6216F519100192ED3 /* WeatherHTTPClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHTTPClientConfiguration.swift; sourceTree = "<group>"; };
+		F42590B8216F538500192ED3 /* configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configuration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,8 @@
 		F4259074216F3BC600192ED3 /* LeBonCoinTest */ = {
 			isa = PBXGroup;
 			children = (
+				F42590B5216F516500192ED3 /* Configuration */,
+				F42590AA216F3D6200192ED3 /* HTTP */,
 				F4259075216F3BC600192ED3 /* AppDelegate.swift */,
 				F4259077216F3BC600192ED3 /* ViewController.swift */,
 				F4259079216F3BC600192ED3 /* Main.storyboard */,
@@ -146,6 +160,7 @@
 				F4259081216F3BC700192ED3 /* LaunchScreen.storyboard */,
 				F4259084216F3BC700192ED3 /* Info.plist */,
 				F425907C216F3BC600192ED3 /* LeBonCoinTest.xcdatamodeld */,
+				F42590B8216F538500192ED3 /* configuration.json */,
 			);
 			path = LeBonCoinTest;
 			sourceTree = "<group>";
@@ -166,6 +181,41 @@
 				F425909A216F3BC800192ED3 /* Info.plist */,
 			);
 			path = LeBonCoinTestUITests;
+			sourceTree = "<group>";
+		};
+		F42590AA216F3D6200192ED3 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				F42590B2216F452900192ED3 /* WeatherHTTPClient */,
+				F42590AD216F406C00192ED3 /* Models */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		F42590AD216F406C00192ED3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F42590AE216F408900192ED3 /* Weather.swift */,
+				F42590B0216F43B700192ED3 /* WeatherItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F42590B2216F452900192ED3 /* WeatherHTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				F42590AB216F3D7A00192ED3 /* WeatherHTTPClient.swift */,
+				F42590B3216F453900192ED3 /* ApiRouter.swift */,
+			);
+			path = WeatherHTTPClient;
+			sourceTree = "<group>";
+		};
+		F42590B5216F516500192ED3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F42590B6216F519100192ED3 /* WeatherHTTPClientConfiguration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42590B9216F538500192ED3 /* configuration.json in Resources */,
 				F4259083216F3BC700192ED3 /* LaunchScreen.storyboard in Resources */,
 				F4259080216F3BC700192ED3 /* Assets.xcassets in Resources */,
 				F425907B216F3BC600192ED3 /* Main.storyboard in Resources */,
@@ -304,15 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LeBonCoinTestUITests-checkManifestLockResult.txt",
 			);
@@ -326,15 +373,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LeBonCoinTest/Pods-LeBonCoinTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
@@ -348,15 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LeBonCoinTestTests-checkManifestLockResult.txt",
 			);
@@ -370,15 +409,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LeBonCoinTest-checkManifestLockResult.txt",
 			);
@@ -397,6 +432,11 @@
 				F4259078216F3BC600192ED3 /* ViewController.swift in Sources */,
 				F425907E216F3BC600192ED3 /* LeBonCoinTest.xcdatamodeld in Sources */,
 				F4259076216F3BC600192ED3 /* AppDelegate.swift in Sources */,
+				F42590AC216F3D7A00192ED3 /* WeatherHTTPClient.swift in Sources */,
+				F42590AF216F408900192ED3 /* Weather.swift in Sources */,
+				F42590B1216F43B700192ED3 /* WeatherItem.swift in Sources */,
+				F42590B7216F519100192ED3 /* WeatherHTTPClientConfiguration.swift in Sources */,
+				F42590B4216F453900192ED3 /* ApiRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
